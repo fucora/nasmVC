@@ -1,0 +1,1 @@
+-o inctest.com E:\51Work\nasmVC\test\inctest.asm

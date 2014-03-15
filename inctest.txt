@@ -1,0 +1,15 @@
+%line 1+1 inctest.asm
+
+[bits 16]
+[org 0x100]
+	  jmp _main
+%line 1+1 inc2.asm
+
+
+message:  db 'hello, world',13,10,'$'
+
+_main:	  mov dx,message
+	  mov ah,9
+	  int 21h
+	  mov ax,4c00h
+	  int 21h

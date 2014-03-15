@@ -1,0 +1,15 @@
+     1                                  
+     2                                  	  BITS 16
+     3                                  	  ORG 0x100
+     4 00000000 E90F00                  	  jmp _main
+     5                                  %include "inc2.asm"
+     6                              <1> 
+     7                              <1> 
+     8 00000003 68656C6C6F2C20776F- <1> message:  db 'hello, world',13,10,'$'
+     9 0000000C 726C640D0A24        <1>
+    10                              <1> 
+    11 00000012 BA[0300]            <1> _main:	  mov dx,message
+    12 00000015 B409                <1> 	  mov ah,9
+    13 00000017 CD21                <1> 	  int 21h
+    14 00000019 B8004C              <1> 	  mov ax,4c00h
+    15 0000001C CD21                <1> 	  int 21h
